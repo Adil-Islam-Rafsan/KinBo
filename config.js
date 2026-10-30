@@ -3,7 +3,7 @@ export const STORE = {
   name: "KinBo",
   // International format, digits only. Example Bangladesh: 8801XXXXXXXXX
   // Replace this placeholder with the WhatsApp number that receives orders.
-  whatsappNumber: "8801XXXXXXXXX",
+  whatsappNumber: "8801333098228",
   currency: "৳",
   // Change delivery fees to match your actual courier rates.
   delivery: {
