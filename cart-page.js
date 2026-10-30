@@ -1,0 +1,12 @@
+import { mountLayout,getProducts,getCart,saveCart,money,productImage,toast } from './store.js';
+mountLayout();const root=document.getElementById('cart-page-content');
+function render(products){
+ const cart=getCart(),entries=Object.entries(cart).filter(([id,q])=>products.some(p=>p.id===id&&p.status==='active'&&p.stock>0&&q>0));
+ if(entries.length!==Object.keys(cart).length){const clean={};entries.forEach(([id,q])=>{const p=products.find(x=>x.id===id);clean[id]=Math.min(q,p.stock)});saveCart(clean)}
+ const subtotal=entries.reduce((s,[id,q])=>s+products.find(p=>p.id===id).price*q,0);
+ if(!entries.length){root.innerHTML='<div class="empty-state">Your cart is empty. <a class="text-link" href="shop.html">Explore products →</a></div>';return}
+ root.innerHTML=`<div class="cart-layout"><div class="cart-list">${entries.map(([id,q])=>{const p=products.find(x=>x.id===id);return `<article class="cart-row"><div class="cart-thumb">${productImage(p)}</div><div><h3>${p.name}</h3><small>${money(p.price)} each · ${p.stock} in stock</small><div class="cart-controls"><button data-qty="${id}" data-delta="-1">−</button><b>${q}</b><button data-qty="${id}" data-delta="1">+</button><button class="remove-link" data-remove="${id}">Remove</button></div></div><div class="cart-row-price">${money(p.price*q)}</div></article>`}).join('')}</div><aside class="summary-card"><h2>Order summary</h2><div class="summary-line"><span>Subtotal</span><b>${money(subtotal)}</b></div><div class="summary-line"><span>Delivery</span><span>Calculated at checkout</span></div><div class="summary-line summary-total"><span>Estimated total</span><b>${money(subtotal)} + delivery</b></div><a class="btn btn-primary" href="checkout.html">Continue to checkout →</a><p class="summary-help">Delivery fee depends on your location. You’ll see it before sending your order.</p></aside></div>`;
+ root.querySelectorAll('[data-qty]').forEach(b=>b.onclick=()=>{const c=getCart(),p=products.find(x=>x.id===b.dataset.qty),next=(c[b.dataset.qty]||0)+Number(b.dataset.delta);if(next>p.stock){toast(`Only ${p.stock} available`);return}if(next<=0)delete c[b.dataset.qty];else c[b.dataset.qty]=next;saveCart(c);render(products)});
+ root.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{const c=getCart();delete c[b.dataset.remove];saveCart(c);render(products)});
+}
+try{render(await getProducts())}catch(e){root.innerHTML='<div class="empty-state">Could not load your cart.</div>'}
