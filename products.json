@@ -1,0 +1,130 @@
+[
+  {
+    "id": "KB001",
+    "name": "Everyday Tote Bag",
+    "category": "Accessories",
+    "price": 450,
+    "oldPrice": 520,
+    "description": "A simple everyday tote for carrying your daily essentials. Replace this description with the exact product details before publishing.",
+    "images": [
+      "KB001.jpg"
+    ],
+    "emoji": "👜",
+    "stock": 12,
+    "status": "active",
+    "featured": true,
+    "badge": "POPULAR"
+  },
+  {
+    "id": "KB002",
+    "name": "Wireless Earbuds",
+    "category": "Tech",
+    "price": 1250,
+    "oldPrice": 1490,
+    "description": "Compact wireless earbuds for everyday listening. Add the correct specifications, battery details, and warranty information before publishing.",
+    "images": [
+      "KB002.jpg"
+    ],
+    "emoji": "🎧",
+    "stock": 8,
+    "status": "active",
+    "featured": true,
+    "badge": "TRENDING"
+  },
+  {
+    "id": "KB003",
+    "name": "Minimal Water Bottle",
+    "category": "Lifestyle",
+    "price": 380,
+    "oldPrice": 0,
+    "description": "A reusable bottle for your daily routine. Replace this with the real capacity, material, and care instructions.",
+    "images": [
+      "KB003.jpg"
+    ],
+    "emoji": "🧴",
+    "stock": 2,
+    "status": "active",
+    "featured": true,
+    "badge": "LOW STOCK"
+  },
+  {
+    "id": "KB004",
+    "name": "Desk Buddy Lamp",
+    "category": "Home",
+    "price": 890,
+    "oldPrice": 0,
+    "description": "A practical desk lamp for a comfortable workspace. Add the correct dimensions, power source, and features.",
+    "images": [
+      "KB004.jpg"
+    ],
+    "emoji": "💡",
+    "stock": 0,
+    "status": "active",
+    "featured": true,
+    "badge": ""
+  },
+  {
+    "id": "KB005",
+    "name": "Classic Wrist Watch",
+    "category": "Accessories",
+    "price": 1450,
+    "oldPrice": 1690,
+    "description": "A classic everyday watch. Add the actual material, movement, water-resistance details, and warranty information.",
+    "images": [
+      "KB005.jpg"
+    ],
+    "emoji": "⌚",
+    "stock": 5,
+    "status": "active",
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "id": "KB006",
+    "name": "Pocket Notebook Set",
+    "category": "Lifestyle",
+    "price": 220,
+    "oldPrice": 0,
+    "description": "A handy notebook set for notes, lists, and ideas. Replace this sample information with your real product details.",
+    "images": [
+      "KB006.jpg"
+    ],
+    "emoji": "📒",
+    "stock": 20,
+    "status": "active",
+    "featured": false,
+    "badge": "VALUE"
+  },
+  {
+    "id": "KB007",
+    "name": "Phone Stand",
+    "category": "Tech",
+    "price": 320,
+    "oldPrice": 0,
+    "description": "A compact phone stand for hands-free viewing. Add compatibility and material information for your actual item.",
+    "images": [
+      "KB007.jpg"
+    ],
+    "emoji": "📱",
+    "stock": 7,
+    "status": "active",
+    "featured": false,
+    "badge": ""
+  },
+  {
+    "id": "KB008",
+    "name": "Cozy Mug",
+    "category": "Home",
+    "price": 290,
+    "oldPrice": 0,
+    "description": "A mug for your everyday tea or coffee. Replace this description with the exact capacity and material.",
+    "images": [
+      "KB008.jpg"
+    ],
+    "emoji": "☕",
+    "stock": 0,
+    "status": "active",
+    "featured": false,
+    "badge": ""
+  }
+]
